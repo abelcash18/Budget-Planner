@@ -71,7 +71,7 @@
     function getTotals() {
       const spent = state.expenses.reduce((sum, item) => sum + Number(item.amount), 0);
       const remaining = Number(state.budget) - spent;
-      const percent = state.budget > 0 ? Math.round((spent / state.budget) * 100000) : 0;
+      const percent = state.budget > 0 ? Math.round((spent / state.budget) * 100) : 0;
       return { spent, remaining, percent };
     }
 
